@@ -1,0 +1,54 @@
+.testimonials {
+  max-width: 100%; /* Prevent overflow from the testimonials */
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  position: relative; /* Ensure relative positioning for the slider */
+}
+
+.slick-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Ensure slides take full width */
+}
+
+.testimonial-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #320404;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #000;
+}
+
+.slick-prev, .slick-next {
+  font-size: 0; /* Remove default text */
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  color: #000; /* Customize arrow color */
+}

@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.App-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: rgb(142, 99, 20);
+  text-align: center;
+  z-index: 1000;
+  max-height: 300px; /* Adjust based on the height of the image gallery */
+  overflow: hidden;
+}
+
+main {
+  margin-top: 300px; /* Adjust based on the height of the header */
+}
+
+section {
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+

@@ -1,0 +1,17 @@
+.image-gallery {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .gallery img {
+    max-width: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+  }
