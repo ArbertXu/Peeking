@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
@@ -11,23 +11,83 @@ body {
   background-color: #FFFFFF;
   color: rgb(142, 99, 20);
   text-align: center;
+  place-content: center;
   z-index: 1000;
   max-height: 300px; /* Adjust based on the height of the image gallery */
   overflow: hidden;
-}
+  padding-bottom: 10px;
+}.
 
 main {
+  flex: 1;
+   overflow: hidden;
+  background-color: #973131;
   margin-top: 300px; /* Adjust based on the height of the header */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: calc(100vh - 300px); /* Adjust height based on header */
+  
 }
 
-section {
-  padding: 20px;
-  margin: 20px 0;
+.App-section {
+  display: flex;
+  place-content: center;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 64.5%;
   border-bottom: 1px solid #ccc;
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 10px;
+  height: calc(100vh - 300px); 
 }
 
 img {
-  max-width: 100%;
+  display: block;
+  align-self: center;
+  overflow: hidden;
+  max-width: 50%;
   height: auto;
+ margin-left: 97.3%;
+ margin-top: 150px;
+ margin-right: auto;
 }
 
+/* .center {
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+} */
+
+.App-Text
+{
+  font-family: 'Lexend Deca';
+  font-size: 50px;
+  margin-left: 85%;
+  text-align: center;
+  align-content: center;
+  margin-top: 200px;
+  display: flex;
+  color: #FFB634;
+}
+.App-slogan
+{
+  margin-left: 100%;
+  width: 300px;
+  font-size: 30px;
+  font-family: 'Lexend Deca';
+  color: #FFB634;
+}
+
+.App-button
+{
+  background-color: white;
+  margin-top: 200px;
+  margin-left: 10%;
+  width: 85%;
+}

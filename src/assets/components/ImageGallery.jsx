@@ -10,7 +10,6 @@ function ImageGallery() {
 
   return (
     <div className="image-gallery">
-      <p>Peeking</p>
       <div className="gallery">
         {images.map((image, index) => (
           <img key={index} src={image} alt={`Gallery ${index}`} />

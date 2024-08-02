@@ -1,54 +1,68 @@
-.testimonials {
-  max-width: 100%; /* Prevent overflow from the testimonials */
-  text-align: center;
-  overflow: hidden;
-  padding: 20px;
-  position: relative; /* Ensure relative positioning for the slider */
+/* Center the carousel container on the page */
+.testimonials-container {
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden; /* Prevent overflow issues */
+  display: flex;
+  
 }
 
-.slick-slider {
-  display: flex;
+/* Carousel styling */
+.carousel-item {
+  display: none; /* Hide all items by default */
   justify-content: center;
   align-items: center;
+  width: 100%; /* Ensure each carousel item takes full width */
 }
 
-.slick-slide {
-  display: flex;
-  justify-content: center;
-  width: 100%; /* Ensure slides take full width */
+.carousel-item.active {
+  display: flex; /* Show the active item */
+}
+
+.testimonials {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  padding:  15px;
 }
 
 .testimonial-card {
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 10px; /* Center card within its column */
+  max-width: 100%;
+  width: 100%; /* Ensure the card takes up full width of the carousel item */
+  height: 200px; /* Set a fixed height for consistent sizing */
   padding: 20px;
-  border: 1px solid #320404;
-  border-radius: 10px;
-  background-color: #fff;
+  border: 1px solid #131d5f;
+  border-radius: 30px;
+  background-color: #420d0d;
+  color: white; /* Ensures text is visible on dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  
 }
 
-.testimonial-card img {
+/* Customize carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background color for visibility */
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 10px;
 }
 
-.slick-dots {
-  bottom: -30px;
-}
-
-.slick-dots li button:before {
-  font-size: 12px;
-  color: #000;
-}
-
-.slick-prev, .slick-next {
+.carousel-control-prev,
+.carousel-control-next {
   font-size: 0; /* Remove default text */
 }
 
-.slick-prev:before, .slick-next:before {
-  font-size: 30px;
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.carousel-control-prev:before,
+.carousel-control-next:before {
+  font-size: 10px;
   color: #000; /* Customize arrow color */
 }
