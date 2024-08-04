@@ -10,7 +10,8 @@ const ImageButton = () => {
           width: '100%', 
           height: '100px', 
           cursor: 'pointer', 
-          border: 'none' 
+          border: 'none', 
+          margin: '0 auto'
         }} 
       />
     </a>

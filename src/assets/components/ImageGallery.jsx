@@ -4,7 +4,6 @@ import './ImageGallery.css';
 function ImageGallery() {
   const images = [
     'Images/PeekingDuck.jpg',
-    'Images/Peeking.jpg',
     'Images/Icon-Set.jpg'
   ];
 
