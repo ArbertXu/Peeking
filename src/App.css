@@ -1,93 +1,237 @@
+
+
+/* Make text responsive */
+.App-Text h1 {
+  font-size: 7vw; /* 10% of the viewport width */
+  margin: 0;
+  padding: 0;
+}
+
+
+.jobSeekerText {
+  margin-bottom: -1vw;
+}
+
+.EmployerText {
+  margin-bottom: -1vw;
+}
+
+.App-Text p {
+  font-size: 2vw;
+}
+
+@media only screen and (max-width: 1170px)  {
+
+  .App-slogan p{
+    
+    font-size: 2vw;
+    margin-bottom: 12vw;
+  }
+
+}
+
+@media only screen and (max-width: 1170px) {
+
+  .App-slogan p{
+    z-index: -100;
+    font-size: 1vw;
+  }
+  
+}
+
+
+/* Define the keyframes for the fade-out animation */
+/* Define the keyframes for the fade-out animation */
+.fade-in-out {
+  
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-out {
+  
+  opacity: 0;
+}
+
+.fade-in-move {
+  opacity: 1;
+  transform: translateY(20px);
+  font-size: 7vw;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+}
+
+.fade-in-move.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.App-connect {
+  text-align: center;
+}
+.App-connect h1{
+  font-weight: 350;
+}
+.App-connect p {
+  font-style: italic;
+  margin-top: 5vh;
+  font-size: 2.5vw;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important; 
 }
 
 .App {
-  text-align: center;
+  overflow-x: hidden;
+  /* text-align: center; */
   background-color: white;
   width: 100vw;
+  font-family: 'Nunito', sans-serif;
+  color: #000000;
+  margin-top: 3vw;
+  
+}
+.bold-text {
+  
+  font-weight: 700;
 }
 
 .App-img img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 
+
+/* When in view: fade in and move into place */
+.App-believe.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .App-header {
-  position: fixed;
   top: 0;
   width: 100%;
   background-color: #FFFFFF;
-  color: rgb(142, 99, 20);
+  color: #FFB634;
   text-align: center;
   place-content: center;
   z-index: 1000;
-  max-height: 300px;
-  overflow: hidden;
-  padding-bottom: 10px;
+  max-height: 100%;
+  
 }
 
 main {
   flex: 1;
   overflow: hidden;
-  background-color: #973131;
-  margin-top: 300px; /* Adjust based on the height of the header */
+  background-color: #ffffff;
+  margin-top: 30vw; /* Adjust based on the height of the header */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 300px); /* Adjust height based on header */
+  height: calc(100vh - 300vh); /* Adjust height based on header */
 }
 
 .App-content {
+  margin-top: 0vw;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  height: 100%;
 }
 
 .App-img {
-  flex: 1;
-  max-width: 50%; /* Adjust the width as needed */
+  display: flex;
+  justify-content: center; /* Centers the images horizontally */
+  align-items: center; /* Centers the images vertically */
+  flex-wrap: nowrap; /* Ensures images are in one row */
+  gap: 10px; /* Adds some space between the images */
 }
 
-.App-text {
-  flex: 1;
-  max-width: 50%; /* Adjust the width as needed */
-  padding-left: 20px; /* Space between the image and text */
-  text-align: left;
+.App-Text {
+  margin-top: 3vw;
+  max-width: 100hv; 
+  text-align: center;
 }
 
-.App-section {
+
+
+.App-download{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1vh;
+}
+
+.App-download img{
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1vh;
+}
+
+
+.App-Section {
   display: flex;
   justify-content: center; 
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid #ccc;
   background-color: #FFFFFF;
+  color: black;
   width: 100%;
-  height: 80vh; /* Adjust height to minimize extra space */
-}
-
-.App-Text,
-.App-slogan {
-  font-family: 'Lexend Deca';
-  color: #FFB634;
+  height: 100vh; /* Adjust height to minimize extra space */
 }
 
 .App-Text {
-  font-size: 50px;
-  margin: 0;
-  padding: 0;
+  color: #FFB634;
+  padding-bottom: 60px;
+}
+.App-Text h3 {
+  color: black;
+}
+.App-Text p{
+  font-size: 35px;
+  color: #000000;
 }
 
-.App-slogan {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
+.App-Text h1{
+  font-size: 90px;
+  padding-bottom: 20px;
 }
+
+.clickable-image {
+  width: 90%; 
+  height: 100%; 
+  cursor: pointer; 
+  border: none; 
+  display: flex; 
+  position: relative;
+  
+  z-index: 2000; /* Ensure it's on top */
+  pointer-events: auto; /* Ensure it can capture click events */
+}
+
+
+.App-slogan {
+  text-align: center;
+  color: #000000;
+}
+
+.App-slogan p {
+  font-weight: 500;
+  margin-top: 10vw;
+  font-size:8vh; /* Adjust the font size as needed */
+}
+
+
+
+.App-Text {
+  font-size: 70px;
+  padding-top: 100px;
+}
+
+
+
+
 
 .App-button {
   display: flex;
@@ -98,19 +242,608 @@ main {
   margin: 0; /* Remove any extra margin */
 }
 
+.App-content a,
+.App-content img {
+  pointer-events: auto; /* Re-enable pointer events for the specific elements */
+}
+
 .scroll-container {
   display: flex;
   padding: 0; /* Remove padding */
-  background-color: #381257;
   height: 100vh;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+  
 }
 
 .scroll-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow-y: auto;
+  height: auto;
+  overflow-y: hidden;
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margin */
+  pointer-events: none;
+}
+
+.App-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 2vh; /* Adjust height as needed */
+}
+
+.App-link {
+  margin: 0 20px;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #FFB634;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+}
+
+
+
+@media only screen and (max-width: 1170px){
+  
+
+  .flip-container {
+    width: 150px;
+  }
+
+  .back-content h2 {
+    font-size: 10px;
+  }
+
+  .App-slogan p {
+    white-space: nowrap;
+    font-size: 7vw;
+  }
+  .App-download{
+    margin-top: -3vw;
+    width: 100%;
+    height: 7hv;
+  }
+  .App-download img{
+
+    width: 40vw;
+  }
+  .App-Text
+  {
+    margin-top: -160px;
+  }
+  
+  
+  .App-Text p 
+  {
+    width: 80vw;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-size: 5vw;
+    line-height: 1;
+  }
+  .jobSeekerText {
+    font-size: 6.5vw !important; 
+  }
+  .EmployerText {
+    font-size: 6.5vw !important; 
+    margin-top: 9vw;
+  }
+
+  .App-Text h3 {
+    font-size: 22px;
+    color: black;
+  }
+  .peeking-text
+  {
+    font-size: 9vh;
+  }
+  .App-Text h1 {
+    padding-bottom: 12vw;
+  }
+  .App-connect {
+    margin-top: 0vw;
+  }
+  .App-connect h1{
+    font-size: 7vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .App-connect p{
+    font-style: italic;
+    padding-top: 2vw;
+    font-size: 6vw;
+  }
+  .App-content {
+    margin-top: 6vw;
+    height: 75%;
+  }
+  .App-header {
+    top: 0;
+    max-width: 100%;
+    background-color: #FFFFFF;
+    color: #FFB634;
+    text-align: center;
+    place-content: center;
+    z-index: 9999;
+    max-height: 100%;
+  }
+  
+}
+
+.App-description {
+  text-align: center; /* Center align text */
+  margin-top: 3.5vw;
+  color: black;
+  font-size: 2vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+
+strong {
+  font-weight: 700;
+  font-size: 1.9vw;
+}
+
+.App-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10vh;
+  background-color: #ffffff;
+  text-align: center;
+}
+.App-stats1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10vh;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Individual statistic box */
+
+
+/* Heading inside each stat box */
+.App-stats p {
+  font-size: 1.5vw;
+  color: #000000;
+  border-radius: 25px;
+  background: #e0e0e0;
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  padding: 10px 20px; /* Adds 10px padding top and bottom, 20px padding left and right */
+}
+
+.App-stats1 p {
+  font-size: 1.5vw;
+  color: #000000;
+  border-radius: 25px;
+  background: #e0e0e0;
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  padding: 10px 20px; /* Adds 10px padding top and bottom, 20px padding left and right */
+}
+
+
+.App-stats h1 {
+  font-size: 3vw;
+  margin-bottom: 5vh;
+}
+
+.App-stats1 h1 {
+  font-size: 3vw;
+  margin-bottom: 5vh;
+}
+
+.App-believe {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  margin-top: 10vw;
+  text-align: center;
+}
+.App-believe h2 {
+  font-size: 4rem;
+  margin-bottom: 3vw;
+}
+
+.belief-statements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.WebelieveImage {
+  width: 30%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Apply the fade-in animation to each list item with delays */
+.belief-item {
+  opacity: 1;
+  animation: fadeIn 1s forwards; /* Adjust the duration as needed */
+}
+
+.belief-item:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.belief-item:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.belief-item:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.belief-item:nth-child(4) {
+  animation-delay: 2s;
+}
+.belief-item.fade-in {
+  opacity: 1;
+}
+
+.belief-statements li {
+  
+  background-color: #FFB634; /* Background color for list items */
+  color: black; /* Text color */
+  padding: 2vw 1vw;
+  margin-bottom: 4vw; /* Space between items */
+  font-size: 2.2rem;
+  font-weight: 500;
+  position: relative;
+  border-radius: 2vw;
+  width: 100%; /* Make the list item narrower */
+  width: 70vw; /* Set a maximum width to ensure the bubbles don't extend too far */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically within each list item */
+  justify-content: center; /* Center content horizontally within each list item */
+}
+
+/* Align odd items to the left */
+.belief-statements li:nth-child(odd) {
+  align-self: flex-start;
+}
+
+
+
+/* Align even items to the right */
+.belief-statements li:nth-child(even) {
+  align-self: flex-end;
+  
+}
+
+
+.fade-in-item {
+  opacity: 0;
+  transform: translateY(20px); /* Slightly offset the item */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth fade-in and slide-up effect */
+}
+
+.fade-in-item.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move the item to its original position */
+}
+
+
+
+
+
+
+
+
+
+/* Value inside each stat box */
+
+/* Mobile adjustments */
+@media only screen and (max-width: 1170px){
+  .App-stats {
+    width: 100%;
+    max-width: 100%;
+    
+  }
+  .App-stats1 {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50vw;
+  }
+  .WebelieveImage {
+    width: 80%;
+  }
+  
+
+  .App-stats p {
+    font-size: 5vw;
+    color: #000000;
+    border-radius: 20px;
+    background: #e0e0e0;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    padding: 0px 20px; /* Adds 10px padding top and bottom, 20px padding left and right */
+    padding-top: 2px;
+  }
+  .App-stats1 p {
+    font-size: 5vw;
+    color: #000000;
+    border-radius: 20px;
+    background: #e0e0e0;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    padding: 0px 20px; /* Adds 10px padding top and bottom, 20px padding left and right */
+    padding-top: 2px;
+  }
+  .App-stats h1{
+    font-size: 7vw;
+  }
+  .App-stats1 hw {
+    font-size: 7vw;
+  }
+  .fade-in-move.visible {
+    font-size: 7vw;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .App-description {
+    margin: 10vw;
+    text-align: center;
+    font-size: 5.5vw;
+  }
+  strong {
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .App-section {
+    margin: 0;
+    min-height: 100vh; /* Ensure the section can expand */
+  }
+  .App-believe {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    margin-top: 30vw;
+  }
+  .App-believe h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3vw;
+  }
+  
+  
+  .belief-item {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+  .belief-item.fade-in {
+    opacity: 1;
+  }
+  
+  .belief-statements li {
+    
+    background-color: #FFB634; /* Background color for list items */
+    color: black; /* Text color */
+    height: 23vw; /* Adjust height */
+    font-weight: 500;
+    border-radius: 5vw;
+    width: 85vw; /* Set a maximum width to ensure the bubbles don't extend too far */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: flex; /* Use flexbox for centering */
+    text-align: left;
+    align-items: center;
+  }
+  .belief-statements li p {
+    margin: 2vw;
+    font-size: 1.45rem;
+  }
+  
+  /* Align odd items to the left */
+  .belief-statements li:nth-child(odd) {
+    align-self: flex-start;
+  }
+  
+  
+  
+  /* Align even items to the right */
+  .belief-statements li:nth-child(even) {
+    align-self: flex-end;
+    
+  }
+  
+  
+  .fade-in-item {
+    opacity: 0;
+    transform: translateY(20px); /* Slightly offset the item */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth fade-in and slide-up effect */
+  }
+  
+  .fade-in-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move the item to its original position */
+  }
+  
+  
+  
+}
+
+.landscape-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 9999;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+
+
+.App-match {
+  text-align: center;
+  font-family: 'Patrick Hand SC';
+  margin-top: 0vw;
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: auto; /* Full viewport height to ensure vertical centering */
+  text-align: center;
+  font-family: 'Patrick Hand SC';
+  margin-top: 0; /* Adjusted from 0vw to 0 for proper margin handling */
+}
+.App-match p {
+  margin: 0;
+  font-size: 3.5vw;
+}
+.App-match h2{
+  margin: 0;
+  font-size: 5vw;
+  color: #FFB634;
+  margin-bottom: 10vw;
+}
+
+@media only screen and (max-width: 1170px) {
+  .App-section {
+    min-height: 100vh; /* Ensure the section can expand */
+    padding-right: 10px; /* Adjust padding for smaller screens */
+  }
+  .App-match {
+    display: none;
+    overflow-x: hidden;
+    width: 100%;
+    margin-top: 30vw;
+  }
+  .App-match h2{
+    margin-top: -3.5vw;
+  }
+}
+
+.bold-text {
+  font-weight: bold;
+}
+.bold-text-i{
+  font-size: 2.5vw;
+  font-style: italic;
+  font-weight: bold;
+}
+.info-text {
+  display: block;
+  margin-top: 5px;
+  color: #666; /* Adjust color as needed */
+  margin-bottom: 100px;
+}
+
+
+
+.rocket-icon {
+  z-index: 1000;
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-left: 47vw;
+  margin-top: 4vw;
+  display: block;
+  
+}
+
+@media only screen and (max-width: 1170px) {
+ 
+
+  
+  .App-tips h1 {
+    white-space: nowrap;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    font-size: 6vw;
+  }
+  .duck-icon {
+    margin-top: 307px;
+    width: 30%;
+    margin-left: 170px;
+    
+  }
+  .info-text {
+    display: block;
+    margin-top: 5px;
+    color: #666; /* Adjust color as needed */
+    margin-bottom: 10px;
+  }
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .rocket-icon {
+    z-index: -1000;
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-left: 0vw;
+    display: block;
+    margin-top: 2vw;
+  }
+
+  .weirdduck-icon{
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-left:40px;
+    margin-top: -50px;
+  }
+
+
+}
+
+
+.App-tips {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+
+
+.App-tips h1 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+
+
+.App-tips a {
+  color: #000; /* Adjust link color as needed */
+  text-decoration: none;
+}
+
+.App-tips a:hover {
+  text-decoration: underline;
 }

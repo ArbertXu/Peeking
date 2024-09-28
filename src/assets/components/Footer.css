@@ -1,0 +1,207 @@
+/* Default desktop styles */
+.footer {
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically centered */
+  width: 100%;
+}
+
+.footer .left-content {
+  flex: 2; /* Adjust to flex: 1 to ensure equal spacing */
+  text-align: right; /* Ensure text aligns to the left */
+}
+
+.footer .right-content {
+  flex: 2; /* Adjust to flex: 1 to ensure equal spacing */
+  
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Align items vertically centered */
+}
+
+.footer-links li {
+  line-height: 1vw;
+  margin: 0 10px; /* Adjust margin to ensure spacing */
+  font-size: 13px;
+}
+
+.footer-links li h2 {
+  line-height: 1vw;
+  margin: 0 10px; /* Adjust margin to ensure spacing */
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: rgb(55, 55, 55);
+  text-decoration: none;
+}
+
+.footer-links .image-button {
+  width: 550px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  border: none; /* Remove border if not needed */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+.linkedin {
+  width: 12px; /* Adjust width if needed */
+}
+.terms-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+/* Mobile styles */
+/* Mobile styles */
+@media only screen and (max-width: 1170px) {
+
+  .footer {
+    border-top: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .footer .right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Ensure ImageButton is first */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .footer-links li {
+   
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  .footer-links li h2{
+    margin-top: 2vw;
+    font-size: 20px;
+  }
+
+  /* Row with Terms of Use and Privacy Policy */
+  .terms-row {
+    margin-bottom: -10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Gray line below ImageButton only */
+  .footer-links .image-button {
+    width: 600px;
+    height: 110px;
+    
+    margin-bottom: 0px;
+    
+  }
+
+
+
+  /* Gray line above Copyright text */
+  .footer .left-content {
+    width: 80%; /* Adjust the width as needed */
+    margin-left: auto; /* Center the border horizontally */
+    margin-right: auto; /* Center the border horizontally */
+    text-align: left;
+    margin-bottom: -5vw;
+  }
+
+  .footer .left-content p {
+    font-size: 13px;
+    padding-top: 10px;
+    white-space: nowrap;
+    width: auto; /* Ensure the text width is only as long as the content */
+  }
+  
+
+  /* Icons in the same row */
+  .footer-links .icon {
+    display: inline-block;
+    margin: 0px 5px;
+    margin-top: 5vw;
+    position: relative;
+    font-size: 5.7vw;
+  }
+  
+  .linkedin
+{
+  position: flex;
+  margin-bottom: 2vw;
+  width: 5.5vw;
+}
+  
+  /* Add a gray separator line between the two icons */
+  .footer-links .icon:first-child::after {
+    content: "";
+    position: absolute;
+    right: -6px; /* Adjusts the position of the separator */
+    top: 50%;
+    transform: translateY(-60%);
+    height: 8vw; /* Adjust the height of the line */
+    width: 1px;
+    background-color: gray;
+  }
+
+  /* Align the icons together in one row */
+  .footer-links .icon-container {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    border-bottom: 1px solid gray;
+  }
+}
+
+.mobile-text {
+  display: none; /* Hide by default */
+}
+
+@media only screen and (max-width: 1170px) {
+  .mobile-text {
+    display: block; /* Show on mobile devices */
+    font-size: 1.6rem;
+    color: #000000; /* Adjust as needed */
+    text-align: center; /* Center the text */
+    margin-top: 25vw;
+    width: 50%;
+    border-bottom: 1px solid gray;
+    font-family: 'Patrick Hand SC';
+  }
+  .mobile-text h2 {
+    color: #FFB634;
+      margin-top: -3.5vw;
+    margin-bottom: 22vw;
+    font-size: 3rem;
+  }
+}

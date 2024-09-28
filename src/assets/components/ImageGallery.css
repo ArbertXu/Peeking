@@ -1,17 +1,204 @@
 .image-gallery {
-    text-align: center;
-    padding: 20px;
-  }
+  text-align: center;
+  border-bottom: 2px solid rgb(29, 29, 33, .3); 
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.gallery-item {
+  margin: .5vw;
+  display: flex;
+  align-items: center; /* Vertically center the text and image */
   
-  .gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
   
-  .gallery img {
-    max-width: 40px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: transparent;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+.gallery-item img {
+  margin: .5vw;
+  max-width: 100%; /* Set the desired width for the images */
+  height: 66px; /* Maintain the aspect ratio */
+}
+
+.gallery-item1 img {
+  margin: 1vw;
+  max-width: 100%; /* Set the desired width for the images */
+
+}
+.gallery-item1 {
+  display: flex;
+  align-items: center; /* Vertically center the text and image */
+  
+  
+}
+
+.gallery-item p {
+  font-weight: 700;
+  display: flex;
+  margin: .5vw;
+  font-size: 50px; /* Adjust the text size */
+
+}
+.dropdown-trigger-img {
+  height: 3vw; /* Keep the height proportional to the width */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  transition: transform 0.3s ease; /* Smooth transition for any changes */
+}
+
+
+.dropdown-trigger-img {
+  position: relative; /* Ensure the dropdown is positioned relative to its trigger */
+  z-index: 9999; /* Make sure the trigger is on top of other elements */
+}
+
+
+.dropdown-trigger-img {
+  position: relative; /* Ensure dropdown aligns correctly with its trigger */
+}
+
+
+
+
+/* Container for the dropdown menu to handle its full-screen display */
+/* Container for the dropdown menu to handle its full-screen display */
+.dropdown-trigger-img {
+  height: 3vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Full-screen dropdown menu */
+.dropdown-menu {
+  position: fixed !important; /* Fix the menu to the viewport */
+  top: 0;
+  left: 0;  /* Ensure it starts from the left */
+  width: 100vw;  /* Full width */
+  background-color: white;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important; /* Ensure full viewport height */
+  max-height: 100vh !important; /* Prevent height restrictions */
+  overflow-y: auto; /* Allow scrolling within the menu itself if necessary */
+  opacity: 0;
+  transform: none !important;
+  transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.dropdown-menu.show {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+  height: 100vh;
+  margin-top: 5.5vw;
+  background-color: white;
+}
+
+.dropdown-menu.hide {
+  left: 100%;
+  opacity: 0;
+  pointer-events: none;
+  height: 100vw;
+}
+
+.dropdown-item:active {
+  background-color: transparent;
+  color: inherit; /* Keep the text color unchanged */
+  outline: none;
+}
+
+
+/* Dropdown menu items */
+.dropdown-item {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  color: #FFB634;
+}
+
+/* Close icon in the top right corner */
+.close-icon {
+  font-size: 4rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1.5vw;
+}
+
+
+
+@media only screen and (max-width: 1170px) {
+  
+  .gallery-item {
+    margin: 1vw;
   }
+  .gallery-item1{
+    flex-direction: row; /* Stack image and text vertically */
+    align-items: center; /* Center text below the image */
+    
+  }
+
+  .gallery-item img {
+    margin: 1vw;
+    max-width: 100%; /* Smaller images on mobile */
+    max-height: 7vh;
+  }
+  .gallery-item1 img {
+    margin: 0vw;
+    max-width: 80%; /* Smaller images on mobile */
+    max-height: 4vh;
+  }
+
+  .gallery-item p {
+    
+    font-size: 0px; /* Smaller text size on mobile */
+  }
+  .gallery-item1 {
+    margin: 4vw;
+    max-width: 80%; /* Smaller images on mobile */
+    max-height: 4vh;
+  }
+
+  .dropdown-trigger-img {
+    height: 6vw; /* Keep the height proportional to the width */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: transform 0.3s ease; /* Smooth transition for any changes */
+}
+.dropdown-menu {
+    left: 0;
+    right: 0;
+  
+}
+
+.close-icon {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.dropdown-menu.show {
+  left: 0;
+  opacity: 1;
+  pointer-events: auto;
+  height: 100vh;
+  margin-top: 16.5vw;
+  
+}
+
+
+}

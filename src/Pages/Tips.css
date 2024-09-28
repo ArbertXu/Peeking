@@ -1,0 +1,55 @@
+.tips-page {
+    
+    background-color: #ffffff; /* Set the background color to white */
+  }
+  
+  .tips-head {
+    width: 100vw;
+    margin-top: 10vw;
+    background-color: white;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 27vw;
+  }
+
+  
+  
+  .tips-head h1 {
+    font-size: 2rem;
+    color: #000000;
+
+  }
+  .image-container {
+    margin-bottom: 2vw;
+  }
+  
+  .tips-head p {
+    font-size: 1.2rem;
+    color: #000000;
+  }
+  
+  .tips-content {
+    padding: 0; /* Remove padding for the content section */
+  }
+  
+  .tip-list {
+    list-style-type: disc; /* Use disc for bullet points */
+    padding-left: 20px; /* Indent the list items */
+  }
+  
+  .tip-list li {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  @media only screen and (max-width: 1170px) {
+    .tips-head {
+      margin-top: 60vw;
+      background-color: white;
+      text-align: center;
+      height: 100%;
+    }
+  }
+
+  

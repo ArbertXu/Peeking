@@ -1,68 +1,213 @@
-/* Center the carousel container on the page */
+/* Testimonials.css */
+
+/* Override Bootstrap button hover background */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; /* Remove any background color */
+}
+
+/* If needed, override the button styles specifically */
+button.carousel-control-prev,
+button.carousel-control-next {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border if any */
+}
+
+/* Remove purple background on hover */
+button.carousel-control-prev:hover,
+button.carousel-control-next:hover,
+button.carousel-control-prev:focus,
+button.carousel-control-next:focus {
+  background-color: transparent; /* Ensure background stays transparent */
+  outline: none; /* Remove focus outline if any */
+}
+
+/* Optionally, customize the icon color on hover */
+button.carousel-control-prev-icon:hover,
+button.carousel-control-next-icon:hover {
+  background-color: black; /* Ensure the icon color stays the same */
+}
+
 .testimonials-container {
   height: 100vh;
   justify-content: center;
-  overflow: hidden; /* Prevent overflow issues */
+  overflow: hidden;
   display: flex;
-  
 }
 
-/* Carousel styling */
 .carousel-item {
   display: none; /* Hide all items by default */
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   width: 100%; /* Ensure each carousel item takes full width */
-}
-
-.carousel-item.active {
-  display: flex; /* Show the active item */
+  height: auto;
 }
 
 .testimonials {
   width: 100%;
-  max-width: 1000px; /* Adjust max-width as needed */
-  padding:  15px;
-}
-
-.testimonial-card {
-  margin: 10px; /* Center card within its column */
-  max-width: 100%;
-  width: 100%; /* Ensure the card takes up full width of the carousel item */
-  height: 200px; /* Set a fixed height for consistent sizing */
-  padding: 20px;
-  border: 1px solid #131d5f;
-  border-radius: 30px;
-  background-color: #420d0d;
-  color: white; /* Ensures text is visible on dark background */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 15px;
+  max-width: 1000px;
   
 }
 
-/* Customize carousel controls */
+.testimonial-cardS {
+  width: 100%;
+  height: 21vw;
+  border: 3px solid #000000;
+  border-radius: 18px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Add gray line above the "Previously Frustrated Job Searcher" label */
+.testimonial-cardS h6 {
+  border-bottom: 2px solid #d3d3d3; /* Gray color for the line */
+  padding-top: 1vw; /* Space between the line and text */
+  margin-top: 1vw; /* Space above the line */
+}
+
+.bottom-border {
+  display: inline-block;
+  border-bottom: 2px solid gray; /* Adjust thickness and color as needed */
+  padding-bottom: 2px; /* Optional: Adds spacing below the text */
+}
+
+
+.testimonial-card.big-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card .mb-3 {
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-word {
+  font-size: 3vw; /* Change to your desired size */
+  /* Add any other styles you want */
+}
+
+.testimonial-text {
+  font-size: 1vw; /* Change to your desired size */
+  /* Add any other styles you want */
+}
+
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 1170px){
+  .carousel-item .row {
+    flex-direction: column;
+  }
+  
+  .testimonial-card.big-card {
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-cardS {
+    max-width: 100%;
+    width: 100%;
+    height: 130vw; /* Adjusted for mobile view */
+    border: 3px solid #000000;
+    border-radius: 18px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    font-size: 13px;
+  }
+  .testimonial-word {
+    font-size: 6vw; /* Change to your desired size */
+    /* Add any other styles you want */
+  }
+  
+  .testimonial-text {
+    font-size: 3.5vw; /* Change to your desired size */
+    /* Add any other styles you want */
+  }
+  .testimonial-text1 {
+    font-size: 1vw; /* Change to your desired size */
+    /* Add any other styles you want */
+  }
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add background color for visibility */
+  background-color: rgb(0, 0, 0);
   border-radius: 50%;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  font-size: 0; /* Remove default text */
+  font-size: 3vw;
 }
 
 .carousel-control-prev:focus,
 .carousel-control-next:focus {
-  outline: none; /* Remove default focus outline */
+  outline: none;
 }
 
-.carousel-control-prev:before,
-.carousel-control-next:before {
-  font-size: 10px;
-  color: #000; /* Customize arrow color */
+
+
+.testimonials img {
+  max-width: 3vh; /* Ensure images are responsive and fit their container */
+  height: auto;
+}
+/* Positioning dots below the carousel */
+.carousel-dots {
+  position: relative;
+  top: 10px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.carousel-indicators li {
+  background-color: #333;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #000;
+}
+
+
+@media only screen and (max-width: 1170px){
+  .testimonials img {
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Media query for desktops and larger screens */
+@media (min-width: 992px) {
+  .testimonials img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 1200px) {
+  .testimonials img {
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
 }

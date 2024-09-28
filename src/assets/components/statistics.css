@@ -1,0 +1,157 @@
+.custom-carousel {
+  position: relative;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to the entire carousel */
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.custom-carousel-inner {
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for the content area */
+}
+
+.custom-carousel-item {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.custom-carousel-text {
+  width: 50vw;
+  border: 3px solid #000000;
+  border-radius: 18px;
+  padding: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow around the text container */
+}
+
+.custom-carousel-text h3 {
+  font-size: 1.9vw;
+  width: 50vw;
+  padding: 10px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.custom-carousel-text h4 {
+  font-size: 1.5vw;
+  padding: 10px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev {
+  left: -1%;
+}
+
+.carousel-control-next {
+  right: -1%;
+}
+
+.custom-carousel-control-prev-icon,
+.custom-carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Adds shadow to control buttons */
+}
+
+.custom-carousel-control-prev-icon::before,
+.custom-carousel-control-next-icon::before {
+  font-size: 24px;
+}
+
+.carousel .carousel-indicators {
+  justify-content: center;
+}
+
+.carousel .carousel-indicators button {
+  background-color: #948d8d;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  z-index: -1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds shadow to indicator dots */
+}
+
+@media only screen and (max-width: 1170px) {
+  .custom-carousel {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to the entire carousel */
+  }
+  .carousel-item {
+      width: 80vw;
+  }
+
+  .carousel-control-prev {
+      left: 1%;
+  }
+
+  .carousel-control-next {
+      right: +1%;
+  }
+
+  .custom-carousel-text {
+      width: 100vw;
+      padding: 0vw;
+  }
+
+  .custom-carousel-text h3 {
+      font-size: 5vw;
+      width: 70vw;
+      padding: 0vw;
+  }
+
+  .custom-carousel-text h4 {
+      padding: 0vw;
+      width: 70vw;
+      font-size: 3.9vw;
+      margin-bottom: 0vw;
+      padding-bottom: 0vw;
+  }
+
+  .carousel-indicators {
+      margin-right: 5vh;
+      margin-left: 12vw;
+      padding-bottom: 5vw;
+  }
+
+  .carousel .carousel-indicators button {
+      background-color: #948d8d;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      border: none;
+  }
+}
+
+/* Position the indicators below the carousel items */
+.carousel-indicators {
+  position: absolute;
+  bottom: -60px;
+  transform: translateX(-50%);
+  z-index: 900;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  left: 37%;
+}
+
+.carousel-indicators .active {
+  background-color: #000000;
+}
